@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "npx-compil" : "npm run tailwindcompil",
+    "tailwindcompil" : "npx @tailwindcss/cli -i ./src/style.css -o ./src/travel_recommendation.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "tailwindcss": "^4.1.10"
+  }
+}
