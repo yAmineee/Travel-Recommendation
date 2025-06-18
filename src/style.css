@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+body {
+    background-color: #202124;
+    color: azure;
+}
+#page-header {
+
+    /** Layout */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+
+    /* Colors */
+    background-color: #41729faa;
+}
