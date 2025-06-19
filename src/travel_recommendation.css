@@ -211,14 +211,18 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #41729faa;
+  background: linear-gradient( to right, #000401, #0c2d48cf );
 }
 #search-div {
-  background-color: rgba(240, 255, 255, 0.6);
-  color: #202124;
+  background-color: #0004012b;
+  color: #c3e0e5;
   border: 2px solid #c3e0e5;
   border-radius: 2em;
   margin: calc(var(--spacing) * 3);
+}
+#main-section {
+  background: linear-gradient(to right,#0c2d48a8,#b6e2d347);
+  height: 100vh;
 }
 .navlinks-anchor {
   &:hover {
