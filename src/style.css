@@ -4,6 +4,7 @@ body {
     background-color: #202124;
     color: azure;
 }
+
 #page-header {
 
     /** Layout */
@@ -16,4 +17,16 @@ body {
 
     /* Colors */
     background-color: #41729faa;
+}
+
+#search-div{
+    background-color: azure;
+    color: #202124;
+    border: 2px solid #c3e0e5 ;
+    border-radius: 2em;
+    @apply m-3 ;
+}
+
+.navlinks-anchor{
+    @apply hover:text-[#202124];
 }
