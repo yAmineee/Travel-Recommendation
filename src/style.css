@@ -32,10 +32,45 @@ body {
 }
 
 #main-section{
-    background : linear-gradient(to right,#0c2d48a8,#b6e2d347) ;
+    background : linear-gradient(to right,#07131eb8,#b6e2d347) ;
     height: 100vh;
+
+    display: grid;
+    grid-template-columns: 10% 50% 40%;
+}
+
+#titre{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 200%;
+    text-transform: uppercase;
+}
+
+#site-description{
+
+    font-family: 'Times New Roman', Times, serif;
+
+    border-radius: 5em;
+    
+    cursor: default;
+
+    background-color: rgba(3, 9, 14, 0.849);
+
+}
+
+#booking-button{
+    width: fit-content;
+    border: 1px solid white;
+    border-radius: 1em;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    @apply hover:cursor-pointer ;
+    @apply hover:bg-[#03090e90];
+
 }
 
 .navlinks-anchor{
     @apply hover:text-[#202124];
 }
+
