@@ -19,6 +19,7 @@ body {
 
     justify-content: space-between;
 
+
     /* Colors */
     background : linear-gradient( to right, #000401,  #0c2d48cf ) ; /* #0c2d48e8;*/
 }
@@ -71,6 +72,19 @@ body {
 }
 
 .navlinks-anchor{
-    @apply hover:text-[#202124];
+    @apply hover:underline;
+}
+
+.fixed-rs-link{
+    display: flex;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    left: 1em;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    @apply hover:cursor-pointer ;
+    @apply active:animate-spin;
 }
 

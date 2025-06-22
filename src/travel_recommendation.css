@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --animate-spin: spin 1s linear infinite;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -158,6 +159,18 @@
   }
 }
 @layer utilities {
+  .bottom-10 {
+    bottom: calc(var(--spacing) * 10);
+  }
+  .bottom-22 {
+    bottom: calc(var(--spacing) * 22);
+  }
+  .bottom-34 {
+    bottom: calc(var(--spacing) * 34);
+  }
+  .bottom-46 {
+    bottom: calc(var(--spacing) * 46);
+  }
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }
@@ -179,26 +192,11 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .justify-between {
-    justify-content: space-between;
   }
   .justify-evenly {
     justify-content: space-evenly;
@@ -206,22 +204,11 @@
   .self-center {
     align-self: center;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:cursor-default {
     &:hover {
@@ -299,8 +286,26 @@ body {
 .navlinks-anchor {
   &:hover {
     @media (hover: hover) {
-      color: #202124;
+      text-decoration-line: underline;
     }
+  }
+}
+.fixed-rs-link {
+  display: flex;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  left: 1em;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:active {
+    animation: var(--animate-spin);
   }
 }
 @property --tw-rotate-x {
@@ -323,15 +328,10 @@ body {
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
@@ -341,8 +341,6 @@ body {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
     }
   }
 }
