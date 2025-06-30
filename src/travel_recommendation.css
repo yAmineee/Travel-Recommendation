@@ -178,9 +178,6 @@
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
@@ -202,9 +199,6 @@
   .table {
     display: table;
   }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
-  }
   .h-\[8em\] {
     height: 8em;
   }
@@ -216,6 +210,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-default {
+    cursor: default;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -235,6 +232,9 @@
   .self-center {
     align-self: center;
   }
+  .rounded-\[1em\] {
+    border-radius: 1em;
+  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -250,22 +250,17 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-3 {
-    border-style: var(--tw-border-style);
-    border-width: 3px;
-  }
-  .border-4 {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
-  }
   .border-\[\#c3e0e5\] {
     border-color: #c3e0e5;
   }
-  .border-\[black\] {
-    border-color: black;
+  .bg-\[\#000401b5\] {
+    background-color: #000401b5;
   }
   .bg-\[\#07131eb8\] {
     background-color: #07131eb8;
+  }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -427,6 +422,9 @@ body {
   display: grid;
   grid-template-columns: 30% 70%;
   align-items: center;
+}
+fieldset {
+  background: linear-gradient( to right, #000401b5, #0c2d48cf );
 }
 @property --tw-rotate-x {
   syntax: "*";

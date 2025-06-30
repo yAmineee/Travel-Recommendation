@@ -164,3 +164,7 @@ body {
     align-items: center;
 
 }
+
+fieldset{
+    background : linear-gradient( to right, #000401b5,  #0c2d48cf ) ;
+}
