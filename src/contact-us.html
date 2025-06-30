@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="travel_recommendation.css">
-        <title>Laconcu-Travel : Home</title>
+        <title>Laconcu-Travel : Contact Us</title>
     </head>
 
     <body>
@@ -30,20 +30,12 @@
 
             <div id="search-div" class="flex mr-2">
 
-                <input type="search" id="search-input" class="m-2" placeholder="Enter a destination...">
-
-                <svg fill="#c3e0e5" width="40px" class="self-center p-2" viewBox="0 0 54.18 54.18" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M209.944,176.4l.06-.072c.288-.333.571-.675.839-1.021l.064-.082.1-.134a22.528,22.528,0,1,0-18.012,9,22.592,22.592,0,0,0,13.775-4.708c.329-.255.663-.529.995-.815l.054-.048.069-.06c.4-.347.73-.66,1.04-.969s.629-.65.955-1.022Zm-4.523-2.414a17.577,17.577,0,1,1,5.147-12.426A17.457,17.457,0,0,1,205.421,173.981ZM224.6,187.787l-.662-.658,0,0-7.292-7.292a.162.162,0,0,0-.226,0l-.245.243-3.443,3.444-1.455,1.456a.168.168,0,0,0-.046.117.163.163,0,0,0,.046.107l7.95,7.952a.155.155,0,0,0,.116.043.148.148,0,0,0,.105-.042l2.576-2.572,2.571-2.575a.161.161,0,0,0,0-.223Zm-11.054-8.366-1.683-1.682-.214.248-.025.029-.047.054c-.355.4-.679.743-1,1.064s-.647.628-1.057.993l-.01.011-.041.034-.286.247,1.682,1.685,1.341-1.343Z" transform="translate(-170.46 -139.021)"/>
-                </svg>
-
-                <button id="search-button" class="p-2 mr-1 hover:cursor-pointer"> Search </button>
-                <button id="clear-button" class="p-2 hover:cursor-pointer"> Clear </button>
 
             </div>
 
         </header>
 
-        <section id="main-section">
+        <section id="main-section-about">
 
             <div id="side-div">
 
@@ -124,24 +116,40 @@
 
             </div>
 
-            <div id="main-div" class="flex flex-col justify-evenly mb-8">
+            <div id="main-div-contact" class=" ">
                 
-                <h1 id="titre" class="m-5 p-5">
-                            Laconcu Travel... <br> Explore the Dream
-                </h1>
+                <div>
+                      <h1 id="titre" class="m-5 p-5">   Contact Us  </h1>
+                      <h3 class="m-5 p-5" >   Let’s get in touch !  </h3>
+                </div>
+              
 
-                <p id="site-description" class="m-5 p-5">
-                     At Laconcu Travel, we specialize in creating unforgettable journeys. Whether you're yearning for a relaxing beach getaway,
-                      an adrenaline-packed adventure, or a cultural immersion, we offer bespoke travel experiences tailored just for you.
-                </p>
+                <div id="contact-us-form-div" class="m-5 p-5">
 
-                <button id="booking-button" type="button" class="m-5 p-2"> Book Now </button>
+                    <fieldset class="flex flex-col p-5 border-2">
+                        <legend> Leave us a message </legend>
+
+                        <label for="username"> Name</label>
+                        <input type="text" name="username" id="username" placeholder="Enter your name" class="border-1 border-[#c3e0e5]">
+
+                        <label for="useremail"> Email </label>
+                        <input type="text" name="useremail" id="useremail" placeholder="Enter your e-mail" class="border-1 border-[#c3e0e5]">
+
+                        <label for="message"> Message </label>
+                        <input type="text" name="message" id="message" placeholder="Enter your message" class="border-1 border-[#c3e0e5] h-[8em]">
+
+                        <button type="submit" class="mt-5 border-1 w-fit self-center p-2 rounded-xl bg-[#07131eb8] cursor-pointer"> Submit</button>
+
+                    </fieldset>
+
+
+
+                </div>
+
+
 
             </div>
 
-            <div id="result-div">
-
-            </div>
 
         </section>
 
