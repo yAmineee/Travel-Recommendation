@@ -108,7 +108,7 @@
 
         "name": "Angkor Wat, Cambodia",
 
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "imageUrl": "../images/Angkor-Wat-temple.jpg",
 
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
 
@@ -120,7 +120,7 @@
 
         "name": "Taj Mahal, India",
 
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "imageUrl": "../images/taj-mahal.jpg",
 
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
 

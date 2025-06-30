@@ -23,6 +23,9 @@ function getDestination(){
         return;
     }else{
 
+        //Clearer l'output
+        clearOutput();
+
         //Fetch l'api
         fetch(api_url)
         .then(response => response.json())
@@ -86,19 +89,40 @@ function getDestination(){
 
                     });
 
-
                     break;
 
                 case "temples" :
-                    console.log(`Data : \n ${JSON.stringify(data.temples)}`);
+
+                    data.temples.forEach(el => {
+
+                        output_div.innerHTML+= `
+                        
+                                <div class="result-item">
+                                    <hr class="border-8 border-[#07131eed] mr-2 mt-3 rounded-[1.5em]">
+
+                                    <figure class=" mt-2 mr-2 text-black">
+                                        <img src=${el.imageUrl} alt=${el.name} class=" rounded-t-[1em]">
+                                        <figcaption class="bg-white text-center"> ${el.name}</figcaption>
+                                        <aside class="bg-white rounded-b-[1em] p-2">
+                                            <p>
+                                                ${el.description}
+                                            </p>
+                                            <button class="mt-5 border-1 w-15 h-10 self-center pr-2 pl-2 rounded-xl bg-[#0a1520cd] cursor-pointer text-white"> Visit </button>
+                                        </aside>
+                                    </figure>
+                                </div>
+                        
+                        `;
+                        
+                    });
+
                     break;
 
             }
 
-        })
-
+        });
     }
-
+    
 }
 
 /**Fonction pour valider l'input de l'utilisateur */
@@ -123,14 +147,16 @@ function isValidInput(user_input){
 
 }
 
-/**Event listeners */
-document.getElementById("search-button").addEventListener('click', getDestination, false);
-
-document.getElementById("clear-button").addEventListener('click', () => {
+function clearOutput(){
 
     //Clearer l'output div
     document.getElementById("result-div").innerHTML = ` ` ;
     document.getElementById("search-input").value = "";
     document.getElementById("search-input").focus();
 
-}, false);
+}
+
+/**Event listeners */
+document.getElementById("search-button").addEventListener('click', getDestination, false);
+
+document.getElementById("clear-button").addEventListener('click', clearOutput, false);
