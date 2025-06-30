@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --radius-xl: 0.75rem;
     --animate-spin: spin 1s linear infinite;
@@ -181,6 +183,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
@@ -189,9 +194,6 @@
   }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
-  }
-  .mr-3 {
-    margin-right: calc(var(--spacing) * 3);
   }
   .mr-5 {
     margin-right: calc(var(--spacing) * 5);
@@ -205,17 +207,17 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
+  .h-10 {
+    height: calc(var(--spacing) * 10);
   }
   .h-\[8em\] {
     height: 8em;
   }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
+  }
   .w-fit {
     width: fit-content;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -226,14 +228,8 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
   }
   .justify-evenly {
     justify-content: space-evenly;
@@ -241,15 +237,22 @@
   .self-center {
     align-self: center;
   }
+  .rounded-\[1\.5em\] {
+    border-radius: 1.5em;
+  }
   .rounded-\[1em\] {
     border-radius: 1em;
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .rounded-t-\[1em\] {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+  .rounded-b-\[1em\] {
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
   }
   .border-1 {
     border-style: var(--tw-border-style);
@@ -259,8 +262,18 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-8 {
+    border-style: var(--tw-border-style);
+    border-width: 8px;
+  }
+  .border-\[\#07131eed\] {
+    border-color: #07131eed;
+  }
   .border-\[\#c3e0e5\] {
     border-color: #c3e0e5;
+  }
+  .bg-\[\#0a1520cd\] {
+    background-color: #0a1520cd;
   }
   .bg-\[\#000401b5\] {
     background-color: #000401b5;
@@ -268,8 +281,8 @@
   .bg-\[\#07131eb8\] {
     background-color: #07131eb8;
   }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -277,12 +290,20 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .underline {
-    text-decoration-line: underline;
+  .pr-2 {
+    padding-right: calc(var(--spacing) * 2);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .hover\:cursor-default {
     &:hover {
@@ -435,6 +456,11 @@ body {
 fieldset {
   background: linear-gradient( to right, #000401b5, #0c2d48cf );
 }
+#result-div {
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -460,11 +486,6 @@ fieldset {
   inherits: false;
   initial-value: solid;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -479,7 +500,6 @@ fieldset {
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
-      --tw-outline-style: solid;
     }
   }
 }

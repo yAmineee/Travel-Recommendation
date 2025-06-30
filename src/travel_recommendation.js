@@ -14,6 +14,9 @@ function getDestination(){
     //Entrée de l'utilisateur encapsuler sous forme [bool,str]
     let input = isValidInput(destination);
 
+    //Output div
+    let output_div = document.getElementById("result-div");
+
     if(input[0] === false){
         window.alert(`Your input (${input[1]}) is not valid. \n 
             Please enter a valid input (i.e beaches, temples or countries)`);
@@ -28,11 +31,62 @@ function getDestination(){
             switch(input[1]){
 
                 case "beaches" :
-                    console.log(`Data : \n ${JSON.stringify(data.beaches)}`);
+
+                    data.beaches.forEach(el => {
+
+                        output_div.innerHTML+= `
+                        
+                                <div class="result-item">
+                                    <hr class="border-8 border-[#07131eed] mr-2 mt-3 rounded-[1.5em]">
+
+                                    <figure class=" mt-2 mr-2 text-black">
+                                        <img src=${el.imageUrl} alt=${el.name} class=" rounded-t-[1em]">
+                                        <figcaption class="bg-white text-center"> ${el.name}</figcaption>
+                                        <aside class="bg-white rounded-b-[1em] p-2">
+                                            <p>
+                                                ${el.description}
+                                            </p>
+                                            <button class="mt-5 border-1 w-15 h-10 self-center pr-2 pl-2 rounded-xl bg-[#0a1520cd] cursor-pointer text-white"> Visit </button>
+                                        </aside>
+                                    </figure>
+                                </div>
+                        
+                        `;
+                        
+                    });
+                    
                     break;
 
                 case "countries" :
-                    console.log(`Data : \n ${JSON.stringify(data.countries)}`);
+
+                    data.countries.forEach(city => {
+
+                        city.cities.forEach(el => {
+
+                            output_div.innerHTML+= `
+
+                                <div class="result-item">
+                                    <hr class="border-8 border-[#07131eed] mr-2 mt-3 rounded-[1.5em]">
+
+                                    <figure class=" mt-2 mr-2 text-black">
+                                        <img src=${el.imageUrl} alt=${el.name} class=" rounded-t-[1em]">
+                                        <figcaption class="bg-white text-center"> ${el.name}</figcaption>
+                                        <aside class="bg-white rounded-b-[1em] p-2">
+                                            <p>
+                                                ${el.description}
+                                            </p>
+                                            <button class="mt-5 border-1 w-15 h-10 self-center pr-2 pl-2 rounded-xl bg-[#0a1520cd] cursor-pointer text-white"> Visit </button>
+                                        </aside>
+                                    </figure>
+                                </div>
+                        
+                            `;
+                            
+                        });
+
+                    });
+
+
                     break;
 
                 case "temples" :
@@ -71,3 +125,12 @@ function isValidInput(user_input){
 
 /**Event listeners */
 document.getElementById("search-button").addEventListener('click', getDestination, false);
+
+document.getElementById("clear-button").addEventListener('click', () => {
+
+    //Clearer l'output div
+    document.getElementById("result-div").innerHTML = ` ` ;
+    document.getElementById("search-input").value = "";
+    document.getElementById("search-input").focus();
+
+}, false);

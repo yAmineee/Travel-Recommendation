@@ -24,7 +24,7 @@
 
             "name": "Melbourne, Australia",
 
-            "imageUrl": "enter_your_image_for_melbourne.jpg",
+            "imageUrl": "../images/melbourne-victoria-australia.jpg",
 
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
 
@@ -46,7 +46,7 @@
 
             "name": "Tokyo, Japan",
 
-            "imageUrl": "enter_your_image_for_tokyo.jpg",
+            "imageUrl": "../images/Tokyo.jpg",
 
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
 
@@ -56,7 +56,7 @@
 
             "name": "Kyoto, Japan",
 
-            "imageUrl": "enter_your_image_for_kyoto.jpg",
+            "imageUrl": "../images/kyoto.jpg",
 
             "description": "Known for its historic temples, gardens, and traditional tea houses."
 
@@ -78,7 +78,7 @@
 
             "name": "Rio de Janeiro, Brazil",
 
-            "imageUrl": "enter_your_image_for_rio.jpg",
+            "imageUrl": "../images/rio-janeiro.jpg",
 
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
 
@@ -88,7 +88,7 @@
 
             "name": "São Paulo, Brazil",
 
-            "imageUrl": "enter_your_image_for_sao-paulo.jpg",
+            "imageUrl": "../images/Sao-Paulo",
 
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
 
@@ -136,7 +136,7 @@
 
         "name": "Bora Bora, French Polynesia",
 
-        "imageUrl": "enter_your_image_for_bora-bora.jpg",
+        "imageUrl": "../images/bora-bora.jpg",
 
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
 
@@ -148,7 +148,7 @@
 
         "name": "Copacabana Beach, Brazil",
 
-        "imageUrl": "enter_your_image_for_copacabana.jpg",
+        "imageUrl": "../images/copa-cabana.jpg",
 
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
 
